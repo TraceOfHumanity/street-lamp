@@ -11,7 +11,6 @@ export const Experience = () => {
   return (
     <>
       <OrbitControls />
-      <ambientLight intensity={0.5} />
       <StreetLamp />
     </>
   )
