@@ -1,4 +1,4 @@
-import { useGLTF, useTexture } from "@react-three/drei"
+import { Sparkles, useGLTF, useTexture } from "@react-three/drei"
 import { Mesh} from "three"
 
 export const StreetLamp = () => {
@@ -14,9 +14,16 @@ export const StreetLamp = () => {
   return (
     <group>
       <mesh geometry={(nodes['pillar'] as Mesh).geometry}>
-        <meshStandardMaterial map={colorMap} normalMap={normalMap} />
+        <meshStandardMaterial map={colorMap} />
       </mesh>
-      <mesh geometry={(nodes['light'] as Mesh).geometry} />
+      <mesh geometry={(nodes['light'] as Mesh).geometry}>
+        <meshBasicMaterial color="#F5F1DC" />
+      </mesh>
+      <Sparkles 
+        size={3}
+        position={[0, 3.8, 0]}
+
+      />
     </group>
   )
 }
