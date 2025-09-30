@@ -1,14 +1,11 @@
-import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
-import { StreetLamp } from "./components/street-lamp"
+import { Experience } from "./components/experience"
 
 function App() {
 
   return (
-    <Canvas>
-      <OrbitControls />
-      <ambientLight intensity={0.5} />
-      <StreetLamp />
+    <Canvas camera={ { fov: 45, near: 0.1, far: 200, position: [ 0, 1.8, 6 ] } }>
+      <Experience />
     </Canvas>
   )
 }
