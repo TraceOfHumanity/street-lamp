@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Sky } from '@react-three/drei'
 import { StreetLamp } from './street-lamp'
 import { useFrame } from '@react-three/fiber'
 
@@ -13,6 +13,7 @@ export const Experience = () => {
       <OrbitControls />
       <ambientLight intensity={5} />
       <StreetLamp />
+      <Sky sunPosition={[1, 0, 0]} inclination={0} azimuth={0} rayleigh={10} turbidity={8} />
     </>
   )
 }

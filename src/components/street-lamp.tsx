@@ -22,7 +22,8 @@ export const StreetLamp = () => {
       <Sparkles 
         size={3}
         position={[0, 3.8, 0]}
-
+        speed={1.5}
+        scale={[1.5, 1, 1.5]}
       />
     </group>
   )
