@@ -8,3 +8,8 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+}
